@@ -1,0 +1,27 @@
+{
+  "name": "node-example",
+  "version": "0.0.1",
+  "description": "who the hell knows",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Befall/nodejs-test.git"
+  },
+  "keywords": [
+    "nodejs",
+    "test"
+  ],
+  "author": "befall",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/Befall/nodejs-test/issues"
+  },
+  "homepage": "https://github.com/Befall/nodejs-test",
+  "dependencies": {
+    "express": "^4.4.3",
+    "logfmt": "^1.1.2"
+  }
+}
