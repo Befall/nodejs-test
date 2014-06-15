@@ -1,14 +1,11 @@
-var html = require('http');
-var fs = require('fs');
+var express = require('express');
+var app = express();
 
-fs.readFileSync('./index.html', function(err, html) {
-	if (err) {
-		throw err;
-	}
+app.set('Views', __dirname + '/Views');
+app.engine('html', require('ejs').renderFile);
 
-	http.createServer(function(req, res) {
-		res.writeHeader(200, {"Content-Type":"text/html"});
-		res.write(html);
-		res.end();
-	}).listen(8000);
+app.get('/', function(req, res) {
+	res.render('about.html');
 });
+
+app.listen(1337);
