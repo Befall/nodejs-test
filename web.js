@@ -1,6 +1,5 @@
 var html = require('http');
 var fs = require('fs');
-var app = express();
 
 fs.readFileSync('./index.html', function(err, html) {
 	if (err) {
