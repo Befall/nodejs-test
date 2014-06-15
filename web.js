@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-app.set('Views', __dirname + '/Views');
+app.set('Views', __dirname + '../Views');
 app.engine('html', require('ejs').renderFile);
 
 app.get('/', function(req, res) {
