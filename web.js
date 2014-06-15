@@ -1,13 +1,15 @@
-// web.js
- var express = require("express");
- var app = express();
+var html = require('http');
+var fs = require('fs');
+var app = express();
 
+fs.readFileSync('./index.html', function(err, html) {
+	if (err) {
+		throw err;
+	}
 
- app.get('/', function(req, res) {
-   res.send('Hello World!');
-   });
-
-   var port = Number(process.env.PORT || 5000);
-   app.listen(port, function() {
-     console.log("Listening on " + port);
-     });
+	http.createServer(function(req, res) {
+		res.writeHeader(200, {"Content-Type":"text/html"});
+		res.write(html);
+		res.end();
+	}).listen(8000);
+});
